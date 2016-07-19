@@ -1,0 +1,9 @@
+﻿<h3>Demo.MvcQuickSettings - Release History</h3>
+<p class="Contributor">
+	
+</p>
+<hr/>
+<div class="License">
+
+	
+</div>

@@ -1,0 +1,19 @@
+@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage<Demo.MvcQuickSettings.ViewModels.DemoViewModel>
+@using DotNetNuke.Web.Mvc.Helpers
+
+<h1>Index</h1>
+<p>You are viewing Index</p>
+
+<ul>
+    <li>
+        <!-- This helper generates the full URL with queries to identify the moduleid, controller, and action -->
+        <!-- The url in this format will cause the QuickSettings popup to load incorrectly -->
+        <a href="@Url.Action("View2")">Link to View2 using Url.Action Helper</a>
+    </li>
+    <li>
+        <!-- This relative URL DOES works IF the module is not dropped on the Home (root) page -->
+        <!-- For some reason the Home root masking the original page in the URL will cause a 404 -->
+        <!-- i.e., http://localhost/Home/MvcQuickSettings/View2 works, but http://localhost/MvcQuickSettings/View2 does not -->
+        <a href="@(Dnn.ActivePage.FullUrl)/MvcQuickSettings/View2">Link to View2 hard-coded relative url</a>
+    </li>
+</ul>
